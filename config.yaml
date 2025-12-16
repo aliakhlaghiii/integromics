@@ -1,0 +1,41 @@
+data:
+  root_dir: "D:/DSLS/Omics2/modelling/modelling_data"
+  subjects:
+    - "005"
+    - "006"
+    - "007"
+    - "008"
+    - "009"
+    - "010"
+    - "011"
+    - "013"
+    - "014"
+    - "015"
+    - "022"
+    - "026"
+    - "028"
+    - "031"
+    - "046"
+    - "047"
+    - "048"
+    - "050"
+    - "055"
+    - "061"
+    - "068"
+    - "070"
+    - "077"
+    - "095"
+
+clinical:
+  root_dir: "D:/DSLS/Omics2/modelling/clinical_data"
+  main_file: "10162025_UMCG_wide_export_Yescarta_infused_for_tFL_study.xlsx"
+
+processing:
+  load_images: true
+  load_masks: true
+  image_extension: ".nii.gz"
+  mask_extension: ".nii.gz"
+
+output:
+  save_features: true
+  output_dir: "outputs/"
