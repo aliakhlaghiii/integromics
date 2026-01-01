@@ -131,13 +131,13 @@ def cox_univariate_analysis(X, T_col='T', E_col='E', var_threshold=1.0):
     selected_features = ftr_var[ftr_var > var_threshold].index.tolist()
     
     results = []
-    scaler = StandardScaler()
-    cph = CoxPHFitter()
-    
+    X_scaled = X.copy()
     for feature in selected_features:
         try:
             # Scale feature
-            X_scaled = X.copy()
+            scaler = StandardScaler()
+            cph = CoxPHFitter()
+            # ravel() to convert back to 1D array
             X_scaled[feature] = scaler.fit_transform(X[[feature]]).ravel()
             
             # Fit Cox model
