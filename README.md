@@ -22,7 +22,7 @@ This repository contains several complementary analysis pipelines to investigate
 1. **Clone the repository:** 
 
 ```bash
-   git clone https://github.com/yourusername/clinical-radiomics-analysis.git
+   git clone https://github.com/Mahsa-Zf/integromics.git
    cd clinical-radiomics-analysis
 ```
 
