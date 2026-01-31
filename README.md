@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ## Acknowledgements
 
-We would like to thank **Kylie Keijzer, PhD candidate**, University Medical Center Groning-en for her supervision and valuable scientific and clinical guidance.
+We would like to thank **Kylie Keijzer, PhD candidate, University Medical Center Groningen (UMCG)** for her supervision and valuable scientific and clinical guidance.
 
 
 ## License
