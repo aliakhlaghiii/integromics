@@ -1,6 +1,6 @@
 # Project: Prognostic Value of Baseline and Pre-Lymphodepletion PET/CT Imaging in DLBCL Patients Undergoing CAR T-Cell Therapy
 
-## About the repo
+## About the repository
 
 This repository contains several complementary analysis pipelines to investigate whether PET-based radiomics features add predictive value beyond clinical variables for short‑term survival prediction in patients with diffuse large B‑cell lymphoma (DLBCL) treated with CAR T‑cell therapy at the UMCG center. The work is exploratory due to the very small cohort (n = 30) and is intended for hypothesis generation, not clinical decision‑making. The code covers survival analysis with Cox models and Kaplan–Meier plots, classical machine‑learning classifiers (Logistic Regression, KNN), and models using SVM and Random Forest with scikit‑learn pipelines.
 
