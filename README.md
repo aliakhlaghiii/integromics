@@ -10,9 +10,9 @@ This repository contains several complementary analysis pipelines to investigate
 
 - **Folders Ali and Zahra: Machine learning classification** (SVM RBF, Random Forest, Logistic Regression, KNN for survival prediction).  
 
-- **Shared in all Folders: Radiomics feature extraction** (baseline, pre-lymphodepletion, and delta radiomics Time pre-LD (B) - Time baseline (A)).  
+- **Shared in all analysis folders: Radiomics feature extraction** (baseline, pre-lymphodepletion, and delta radiomics Time pre-LD (B) - Time baseline (A)).  
 
-- **Shared in all Folders: Clinical data integration** (clinical variables + radiomics for predictive modeling). 
+- **Shared in all analysis folders: Clinical data integration** (clinical variables + radiomics for predictive modeling). 
 
 - **Folder models_performance:** Plots of ML model results according to 3 metrics (F1-score, Accuracy and ROC-AUC)
 
@@ -23,7 +23,6 @@ This repository contains several complementary analysis pipelines to investigate
 
 ```bash
    git clone https://github.com/Mahsa-Zf/integromics.git
-   cd clinical-radiomics-analysis
 ```
 
 2. **Create virtual environment:**
