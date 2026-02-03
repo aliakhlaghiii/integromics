@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 - **Ali Akhlaghi** (a.akhlaghi@st.hanze.nl)
 - **Mahsa Zamanifard** (m.zamani.fard@st.hanze.nl)
-- **Zahra Taheri Hanjanai** (z.taheri.hanjan@st.hanze.nl)
+- **Zahra Taheri Hanjanai** (z.taheri.hanjani@st.hanze.nl)
 
 ## Acknowledgements
 
