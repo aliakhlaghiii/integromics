@@ -1,29 +1,35 @@
 # Radiomics and Clinical Feature Integration for Survival Prediction in CAR T-cell Therapy
 
 ## Overview
-This repository investigates whether PET-based radiomics features provide additional predictive value beyond clinical variables for short-term survival prediction in patients with diffuse large B-cell lymphoma (DLBCL) undergoing CAR T-cell therapy. Due to the limited cohort size (n = 30), all analyses are exploratory and intended for hypothesis generation.
+
+This repository contains a complete machine learning workflow designed to study the role of PET-based radiomics features in short-term survival prediction for patients with diffuse large B-cell lymphoma (DLBCL) receiving CAR T-cell therapy. In addition to standard clinical variables, the pipeline examines whether changes in radiomics features over time (delta radiomics between Time A and Time B) provide useful additional information.
+
+Due to the small sample size (n = 30) and the very limited independent test set (n = 6), all analyses are exploratory and intended only for hypothesis generation. The results should not be interpreted as clinically actionable. The focus of this work is to systematically compare single-timepoint radiomics with longitudinal radiomics features within a controlled experimental framework.
 
 ## Data
 - Retrospective cohort: **30 DLBCL patients**
 - Train/Test split: **24 / 6**
-- Feature configurations:
+
+## Feature configurations:
   - **X0:** Clinical variables only
   - **X1:** Clinical + baseline radiomics
   - **X2:** Clinical + pre-lymphodepletion radiomics
-  - **X3:** Clinical + delta radiomics
+  - **X3:** Clinical + delta radiomics (B − A) 
 
 ## Models
 - **Logistic Regression**
   - Penalties: None, L1, L2, Elastic Net
   - Optional L1-based feature selection
+
 - **K-Nearest Neighbors (KNN)**
 
-Evaluation metrics:
+## Evaluation metrics:
 - Accuracy
 - ROC-AUC
 - F1-score
 
 ## Repository Structure
+
 - `preprocessor.py` – data loading and preprocessing
 - `logistic_regression.py` – Logistic Regression pipeline
 - `knn_classification.py` – KNN analysis

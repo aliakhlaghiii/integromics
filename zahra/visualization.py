@@ -1,6 +1,5 @@
 """
 Visualization Module
-Contains all plotting functions for Logistic Regression and KNN results
 """
 
 import numpy as np
@@ -220,7 +219,7 @@ def plot_knn_comparison(all_results):
 def create_logistic_comparison_plots(all_results: dict, datasets: dict) -> None:
     """Create comprehensive comparison plots for Logistic Regression - 6 panels like KNN"""
     
-    print("\n🔍 DEBUG: Starting plot creation...")
+    print("\n DEBUG: Starting plot creation...")
     print(f"   Total results: {len(all_results)}")
     print(f"   Dataset keys: {list(datasets.keys())}")
     print(f"   Sample result keys: {list(all_results.keys())[:3]}")
@@ -247,13 +246,13 @@ def create_logistic_comparison_plots(all_results: dict, datasets: dict) -> None:
             best_per_dataset[ds_name] = best_combo[1]
             print(f"      Best AUC: {best_combo[1]['test_auc']:.3f}")
         else:
-            print(f"      ⚠️ No results found!")
+            print(f"       No results found!")
     
     if not best_per_dataset:
-        print("\n❌ ERROR: No results found! Check dataset names and result keys.")
+        print("\n ERROR: No results found! Check dataset names and result keys.")
         return
     
-    print(f"\n✅ Found best results for {len(best_per_dataset)} datasets")
+    print(f"\n Found best results for {len(best_per_dataset)} datasets")
     
     # Extract metrics
     accuracies = []
@@ -410,7 +409,7 @@ def create_logistic_comparison_plots(all_results: dict, datasets: dict) -> None:
     plt.tight_layout()
     plt.show()
     
-    print("\n✅ Comprehensive comparison plots created!")
+    print("\n Comprehensive comparison plots created!")
 
 
 def plot_logistic_comparison(best_results, dataset_names):
@@ -601,6 +600,5 @@ def plot_feature_selection_impact(all_results, datasets_dict):
                  fontsize=14, fontweight='bold')
     plt.tight_layout()
     plt.show()
-
 
 print(" Visualization module loaded successfully!")

@@ -1,6 +1,5 @@
 """
 Preprocessing module for radiomics and clinical data analysis
-This module contains the EXACT functions from the original ipynb code
 """
 
 import os
@@ -10,7 +9,7 @@ import numpy as np
 
 def calculate_delta_radiomics(data_folder_path):
     """
-    EXACTLY as in original code: Reads radiomics data from subfolders (Time A and Time B), 
+    Reads radiomics data from subfolders (Time A and Time B), 
     filters for 'suv2.5' segmentation, calculates the delta (B - A) for numeric features.
 
     Args:
@@ -87,7 +86,7 @@ def calculate_delta_radiomics(data_folder_path):
 
 def clean_and_suffix_radiomics(delta_radiomics_results, a_radiomics, b_radiomics):
     """
-    EXACTLY as in original code: Clean and prepare dataframes by dropping columns with any NaN values,
+    Clean and prepare dataframes by dropping columns with any NaN values,
     resetting index, and adding suffixes.
 
     Args:
@@ -116,7 +115,7 @@ def clean_and_suffix_radiomics(delta_radiomics_results, a_radiomics, b_radiomics
 
 def prepare_and_clean_clinical_data(clinic_data, delta_radiomics_results):
     """
-    EXACTLY as in original code: Prepare clinical data by creating cleaned IDs,
+    Prepare clinical data by creating cleaned IDs,
     filtering patients, dropping unnecessary columns, and handling disease diagnosis.
 
     Args:
@@ -187,7 +186,7 @@ def prepare_and_clean_clinical_data(clinic_data, delta_radiomics_results):
 
 def convert_clinical_data_types(clinic_data_cleaned):
     """
-    EXACTLY as in original code: Convert data types in clinical data.
+    Convert data types in clinical data.
 
     Args:
         clinic_data_cleaned: Clinical DataFrame
@@ -220,7 +219,7 @@ def convert_clinical_data_types(clinic_data_cleaned):
 
 def remove_zero_variance_features(clinic_data_cleaned):
     """
-    EXACTLY as in original code: Remove zero variance columns.
+    Remove zero variance columns.
 
     Args:
         clinic_data_cleaned: Clinical DataFrame
@@ -239,7 +238,7 @@ def remove_zero_variance_features(clinic_data_cleaned):
 
 def impute_clinical_missing_values(clinic_data_cleaned):
     """
-    EXACTLY as in original code: Impute missing values with the median for numeric columns.
+    Impute missing values with the median for numeric columns.
 
     Args:
         clinic_data_cleaned: Clinical DataFrame
@@ -257,7 +256,7 @@ def impute_clinical_missing_values(clinic_data_cleaned):
 
 def drop_clinical_date_columns(clinic_data_cleaned):
     """
-    EXACTLY as in original code: Drop date-related columns.
+    Drop date-related columns.
 
     Args:
         clinic_data_cleaned: Clinical DataFrame
@@ -287,7 +286,7 @@ def drop_clinical_date_columns(clinic_data_cleaned):
 
 def create_all_modeling_datasets(clinic_data_cleaned, delta_radiomics_results, a_radiomics, b_radiomics):
     """
-    EXACTLY as in original code: Create all modeling datasets (X0, X1, X2, X3) and target variable y.
+    Create all modeling datasets (X0, X1, X2, X3) and target variable y.
 
     Args:
         clinic_data_cleaned: Cleaned clinical DataFrame
@@ -343,7 +342,7 @@ def create_all_modeling_datasets(clinic_data_cleaned, delta_radiomics_results, a
 
 def full_preprocessing_pipeline(DATA_DIR, clinic_data):
     """
-    Complete preprocessing pipeline that runs ALL steps in EXACT order as original code.
+    Complete preprocessing pipeline that runs ALL steps.
 
     Args:
         DATA_DIR: Path to radiomics data folder
